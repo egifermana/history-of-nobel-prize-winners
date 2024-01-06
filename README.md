@@ -8,14 +8,14 @@ The Nobel Prize has been among the most prestigious international awards since 1
 
 The Nobel Foundation has made a dataset available of all prize winners from the outset of the awards from 1901 to 2023. The dataset used in this project is from the Nobel Prize API and is available in the `nobel.csv` file in the `data` folder.
 
-### Loading in required libraries
+## Loading in required libraries
 ```python
 import pandas as pd
 import seaborn as sns 
 import numpy as np
 ```
 
-### Read in the Nobel Prize data
+## Read in the Nobel Prize data
 ```python
 nobel = pd.read_csv('nobel.csv')
 nobel
@@ -23,7 +23,7 @@ nobel
 Output
 ```1000 rows x 18 columns```
 
-### Store and display the most commonly awarded gender and birth country in requested variables
+## Store and display the most commonly awarded gender and birth country in requested variables
 ```python
 top_gender = nobel['sex'].value_counts().index[0]
 top_country = nobel['birth_country'].value_counts().index[0]
@@ -37,7 +37,7 @@ Output
  The most common birth country of Nobel laureates is : United States of America
 ```
 
-### Calculate the proportion os USA born winners per decade
+## Calculate the proportion os USA born winners per decade
 ```python
 nobel['usa_born_winner'] = nobel['birth_country'] == 'United States of America'
 nobel['decade'] = (np.floor(nobel['year'] / 10) * 10).astype(int)
@@ -61,7 +61,7 @@ Output
 | 2010 | 0.314050 |
 | 2020 | 0.360000 |
 
-### Identify the decade with the highest proportion of US-born winners
+## Identify the decade with the highest proportion of US-born winners
 ```python
 max_decade_usa = prop_usa_winners[prop_usa_winners['usa_born_winner'] == prop_usa_winners['usa_born_winner'].max()]['decade'].values[0]
 max_decade_usa
@@ -69,7 +69,7 @@ max_decade_usa
 Output
 ```2000```
 
-### Plotting USA born winners
+## Plotting USA born winners
 ```python
 ax1 = sns.relplot(x = 'decade',
                   y = 'usa_born_winner',
@@ -80,7 +80,7 @@ Output
 
 ![](plot-1.png)
 
-### Calculating the proportion of female laureates per decade
+## Calculating the proportion of female laureates per decade
 ```python
 nobel['female_winner'] = nobel['sex'] == 'Female'
 prop_female_winners = nobel.groupby(['decade', 'category'], as_index=False)['female_winner'].mean()
@@ -100,9 +100,10 @@ Output
 | 2020   | Medicine   | 0.125000      |
 | 2020   | Peace      | 0.285714      |
 | 2020   | Physics    | 0.166667      |
+
 ```72 rows x 3 columns```
 
-### Find the decade and category with the highest proportion of female laureates
+## Find the decade and category with the highest proportion of female laureates
 ```python
 max_female_decade_category = prop_female_winners[prop_female_winners['female_winner'] == prop_female_winners['female_winner'].max()][['decade', 'category']]
 max_female_decade_category
@@ -112,7 +113,7 @@ Output
 |--------|----------|
 |2020    | Literature|
 
-### Plotting female winners with % winners on the y-axis
+## Plotting female winners with % winners on the y-axis
 ```python
 ax2 = sns.relplot(x = 'decade', 
                   y = 'female_winner', 
@@ -124,7 +125,7 @@ Output
 
 ![](plot-2.png)
 
-### Finding the first woman to win a Nobel Prize
+## Finding the first woman to win a Nobel Prize
 ```python
 nobel_women = nobel[nobel['female_winner']]
 min_row = nobel_women[nobel_women['year'] == nobel_women['year'].min()]
@@ -135,7 +136,7 @@ print(f"\n The first woman to win a Nobel Prize was {first_woman_name}, in the c
 Output
 ``` The first woman to win a Nobel Prize was Marie Curie, née Sklodowska, in the category of Physics.```
 
-### Selecting the laureates that have received 2 or more prizes
+## Selecting the laureates that have received 2 or more prizes
 ```python
 counts = nobel['full_name'].value_counts()
 repeats = counts[counts >= 2].index
@@ -149,9 +150,3 @@ Ouput
 Linus Carl Pauling, John Bardeen, Frederick Sanger, Marie Curie, née Sklodowska,
 Office of the United Nations High Commissioner for Refugees (UNHCR).
 ```
-
-
-
-
-
-
