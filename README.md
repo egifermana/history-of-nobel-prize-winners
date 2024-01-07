@@ -11,11 +11,11 @@ The Nobel Foundation has made a dataset available of all prize winners from the 
 ## Table of Contents
 - [Loading in Required Libraries](#loading-in-required-libraries)
 - [Read in the Nobel Prize Data](#read-in-the-nobel-prize-data)
-- [Store and Display the Most Commonly Awarded Gender and Birth Country](#store-and-display-the-most-commonly-awarded-gender-and-birth-country)
+- [Store and Display the Most Commonly Awarded Gender and Birth Country](#store-and-display-the-most-commonly-awarded-gender-and-birth-country-in-requested-variables)
 - [Calculate the Proportion of USA-Born Winners per Decade](#calculate-the-proportion-of-usa-born-winners-per-decade)
 - [Identify the Decade with the Highest Proportion of US-Born Winners](#identify-the-decade-with-the-highest-proportion-of-us-born-winners)
 - [Plotting USA Born Winners](#plotting-usa-born-winners)
-- [Calculate the Proportion of Female Laureates per Decade](#calculate-the-proportion-of-female-laureates-per-decade)
+- [Calculate the Proportion of Female Laureates per Decade](#calculating-the-proportion-of-female-laureates-per-decade)
 - [Find the Decade and Category with the Highest Proportion of Female Laureates](#find-the-decade-and-category-with-the-highest-proportion-of-female-laureates)
 - [Plotting Female Winners with % Winners on the Y-axis](#plotting-female-winners-with--winners-on-the-y-axis)
 - [Finding the First Woman to Win a Nobel Prize](#finding-the-first-woman-to-win-a-nobel-prize)
@@ -50,7 +50,7 @@ Output
  The most common birth country of Nobel laureates is : United States of America
 ```
 
-## Calculate the proportion os USA born winners per decade
+## Calculate the proportion of USA born winners per decade
 ```python
 nobel['usa_born_winner'] = nobel['birth_country'] == 'United States of America'
 nobel['decade'] = (np.floor(nobel['year'] / 10) * 10).astype(int)
