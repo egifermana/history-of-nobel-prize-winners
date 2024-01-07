@@ -9,6 +9,8 @@ The Nobel Prize has been among the most prestigious international awards since 1
 The Nobel Foundation has made a dataset available of all prize winners from the outset of the awards from 1901 to 2023. The dataset used in this project is from the Nobel Prize API and is available in the `nobel.csv` file in the `data` folder.
 
 ## Table of Contents
+- [Insights](#insights)
+- [Data Analysis](#data-analysis)
 - [Loading in Required Libraries](#loading-in-required-libraries)
 - [Read in the Nobel Prize Data](#read-in-the-nobel-prize-data)
 - [Store and Display the Most Commonly Awarded Gender and Birth Country](#store-and-display-the-most-commonly-awarded-gender-and-birth-country-in-requested-variables)
@@ -21,6 +23,29 @@ The Nobel Foundation has made a dataset available of all prize winners from the 
 - [Finding the First Woman to Win a Nobel Prize](#finding-the-first-woman-to-win-a-nobel-prize)
 - [Selecting the Laureates That Have Received 2 or More Prizes](#selecting-the-laureates-that-have-received-2-or-more-prizes)
 
+## Insights
+### Introduction
+The Nobel Prize, a symbol of excellence in various fields, has celebrated outstanding achievements since its inception in 1901. This project delves into the comprehensive dataset provided by the Nobel Foundation, spanning from 1901 to 2023. The visualization and analysis aim to uncover patterns, trends, and notable milestones in the history of Nobel laureates.
+
+### Noteworthy Statistics
+The dataset, consisting of 1000 rows and 18 columns, captures essential details about laureates, including gender and birth country. The most common gender among laureates is male, and the United States of America holds the distinction of being the most frequently recorded birth country.
+
+### Proportion of USA-Born Winners Over Time
+Analyzing the dataset, the proportion of USA-born winners per decade is computed. The trend reveals an upward trajectory, with the 2000s standing out as the decade with the highest proportion of US-born winners. A visual representation further emphasizes this progression.
+
+### Evolution of Female Laureates
+Another significant aspect of the analysis explores the proportion of female laureates per decade and category. The category of Literature in the 2020s emerges with the highest proportion of female laureates. A detailed visual representation illustrates the dynamic shifts in female representation across different categories over the years.
+
+### Pioneering Woman Nobel Laureate
+The dataset unveils historical milestones, such as the recognition of the first woman to win a Nobel Prize. Marie Curie, known for her groundbreaking work in Physics, stands as a trailblazer, breaking barriers in the early 20th century.
+
+### Repeat Nobel Laureates
+Identifying laureates who have received two or more prizes adds another layer to the analysis. Notable names include Comité international de la Croix Rouge, Linus Carl Pauling, John Bardeen, Frederick Sanger, and the Office of the United Nations High Commissioner for Refugees (UNHCR).
+
+### Conclusion
+This exploration of the Nobel Prize dataset provides a rich understanding of the historical landscape of laureates. From the changing demographics of winners to groundbreaking achievements by women and the recognition of repeat laureates, the insights gained contribute to a nuanced appreciation of the Nobel Prize's legacy. The visualizations and analyses presented here offer a glimpse into the diverse and evolving landscape of excellence honored by this prestigious international award.
+
+# Data Analysis
 ## Loading in required libraries
 ```python
 import pandas as pd
