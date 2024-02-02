@@ -8,21 +8,6 @@ The Nobel Prize has been among the most prestigious international awards since 1
 
 The Nobel Foundation has made a dataset available of all prize winners from the outset of the awards from 1901 to 2023. The dataset used in this project is from the Nobel Prize API and is available in the `nobel.csv` file in the `data` folder.
 
-## Table of Contents
-- [Insights](#insights)
-- [Data Analysis](#data-analysis)
-- [Loading in Required Libraries](#loading-in-required-libraries)
-- [Read in the Nobel Prize Data](#read-in-the-nobel-prize-data)
-- [Store and Display the Most Commonly Awarded Gender and Birth Country](#store-and-display-the-most-commonly-awarded-gender-and-birth-country-in-requested-variables)
-- [Calculate the Proportion of USA-Born Winners per Decade](#calculate-the-proportion-of-usa-born-winners-per-decade)
-- [Identify the Decade with the Highest Proportion of US-Born Winners](#identify-the-decade-with-the-highest-proportion-of-us-born-winners)
-- [Plotting USA Born Winners](#plotting-usa-born-winners)
-- [Calculate the Proportion of Female Laureates per Decade](#calculating-the-proportion-of-female-laureates-per-decade)
-- [Find the Decade and Category with the Highest Proportion of Female Laureates](#find-the-decade-and-category-with-the-highest-proportion-of-female-laureates)
-- [Plotting Female Winners with % Winners on the Y-axis](#plotting-female-winners-with--winners-on-the-y-axis)
-- [Finding the First Woman to Win a Nobel Prize](#finding-the-first-woman-to-win-a-nobel-prize)
-- [Selecting the Laureates That Have Received 2 or More Prizes](#selecting-the-laureates-that-have-received-2-or-more-prizes)
-
 ## Insights
 ### Introduction
 The Nobel Prize, a symbol of excellence in various fields, has celebrated outstanding achievements since its inception in 1901. This project delves into the comprehensive dataset provided by the Nobel Foundation, spanning from 1901 to 2023. The visualization and analysis aim to uncover patterns, trends, and notable milestones in the history of Nobel laureates.
